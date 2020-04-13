@@ -4,8 +4,8 @@
 const arr = [1, 2, 4, 591, 392, 391, 2, 5, 10, 2, 1, 1, 1, 20, 20, 22];
 
 const obj = arr.reduce((accum, val) => {
-    accum[val] = accum[val] || [];
-    accum[val].push(val);
+    (val in accum) = accum[val] || [];
+    (val in accum).push(val);
     return accum;
 }, {});
 
